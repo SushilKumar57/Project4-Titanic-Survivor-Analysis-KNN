@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+<title>Machine Learning KNN Project Deployment</title>
+<meta charset="UTF-8">
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> 
+<style><!DOCTYPE html>
+
+h1 {text-align: center;}
+h2 {text-align: center;}
+h3 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+</style>
+</head>
+
+<body>
+ 
+     
+<div class="" style="background-color:blue;" >
+<div class="clearfix">
+           
+<div class="col-md-12">
+<center><p style="font-size:40px;color:white;margin-top:10px;">Poornima Institute of Engineering & Technology</p></center> 
+<center><p style="font-size:30px;color:white;margin-top:10px;">Department of Computer Engineering</p></center> 
+<center><p style="font-size:25px;color:white;margin-top:10px;">Machine Learning Project Deployment Using KNN Algorithm</p></center> 
+</div>
+</div>
+</div>
+
+<div class="login">
+<h2 >KNN Algorithm Analysis to predict whether the Passenger Survived or not on the basis of using his/her data (ie name, age, gender, etc).</h2>
+<h4>Developed by Sushil Kumar</h4>
+<!-- Main Input For Receiving Query to our ML -->
+<form action="{{ url_for('predict')}}"method="get">
+
+<div class="form-floating mb-3">
+<input type="number" class="form-control" id="exp" name="exp1" step="any" min="0" max="100" placeholder="0" required="required">
+<label for="floatingInput">Enter Age of Passenger</label>
+</div>
+<br>
+
+<div class="form-floating mb-3">
+<input type="number" class="form-control" id="exp" name="exp2" step="any" min="0" max="20" placeholder="0" required="required">
+<label for="floatingInput">Enter Number of Siblings/Spouses Aboard</label>
+</div>
+<br>
+
+<div class="form-floating mb-3">
+<input type="number" class="form-control" id="exp" name="exp3" step="any" min="0" max="20" placeholder="0" required="required">
+<label for="floatingInput">Enter Number of Parents/ Children Aboard</label>
+</div>
+<br>
+
+<div class="form-floating mb-3">
+<input type="number" class="form-control" id="exp" name="exp4" step="any" min="0" max="10000" placeholder="0" required="required">
+<label for="floatingInput">Enter Passenger Fare in British Pound</label>
+</div>
+<br>
+
+<div class="form-floating mb-3">
+<select class="form-control" name="exp5" id="exp" required="required">
+<option value="">--Select whether Male or Female--</option>
+<option value="0">Female</option>
+<option value="1">Male</option>>
+</select>
+</div>
+<br>
+
+<div class="form-floating mb-3">
+<select class="form-control" name="exp6" id="exp" required="required">
+<option value="">--Select Passenger Class for 1 = 1st, 2 = 2nd, 3 = 3rd--</option>
+<option value="1">1st</option>
+<option value="2">2nd</option>>
+<option value="3">3rd</option>
+</select>
+</div>
+<br>
+
+<br>
+<button type="submit" class="btn btn-primary btn-block btn-large">Predict Whether Passenger had Survived or Not</button>
+</form>
+<br>
+<br>
+{{ prediction_text }}
+
+</div>
+
+<div class="" style="background-color:blue;" >
+<div class="clearfix">
+           
+<div class="col-md-12">
+ <center><p style="font-size:25px;color:white;margin-top:20px;">Project 3 Passenger Survived or Rest in Peace on the basis of using his/her data (ie name, age, gender, etc) of Summer internship 2022 from 27 June to 8 August</p></center> 
+</div>
+</div>
+</div>
+</body>
+</html>
